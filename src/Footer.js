@@ -13,7 +13,7 @@ const Footer = () => (
 
             <ul className="mt-12 flex justify-center gap-6 md:gap-8">
                 <li>
-                    <a href="#" rel="noreferrer" target="_blank" className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75">
+                    <a href="https://github.com/dlamkins/OktaOrgInfo" rel="noreferrer" target="_blank" className="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75">
                         <span>View the Source on GitHub</span>
                     </a>
                 </li>
