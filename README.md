@@ -4,6 +4,8 @@
 
 This is a basic utility which loads information about a given Okta tenant using the `/.well-known/okta-organization` endpoint.
 
+You can use it here: https://dlamkins.github.io/OktaOrgInfo/
+
 ## Available Scripts
 
 In the project directory, you can run:
