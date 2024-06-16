@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/OktaOrgInfo/static/css/main.d723c836.css",
-    "main.js": "/OktaOrgInfo/static/js/main.b58e7ca9.js",
+    "main.js": "/OktaOrgInfo/static/js/main.fd5dc8a1.js",
     "index.html": "/OktaOrgInfo/index.html",
     "main.d723c836.css.map": "/OktaOrgInfo/static/css/main.d723c836.css.map",
-    "main.b58e7ca9.js.map": "/OktaOrgInfo/static/js/main.b58e7ca9.js.map"
+    "main.fd5dc8a1.js.map": "/OktaOrgInfo/static/js/main.fd5dc8a1.js.map"
   },
   "entrypoints": [
     "static/css/main.d723c836.css",
-    "static/js/main.b58e7ca9.js"
+    "static/js/main.fd5dc8a1.js"
   ]
 }
