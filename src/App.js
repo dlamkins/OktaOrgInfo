@@ -92,8 +92,8 @@ const App = () => {
   };
 
   return (
-    <div class="flex flex-col min-h-screen">
-      <main class="flex-grow">
+    <div className="flex flex-col min-h-screen">
+      <main className="flex-grow">
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-lg">
             <h1 className="text-center text-2xl font-bold text-indigo-600 sm:text-3xl">OktaOrgInfo</h1>
@@ -154,7 +154,7 @@ const App = () => {
                         <div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
                           <dt className="font-medium text-gray-900">OrgID</dt>
                           <dd className="text-gray-700 sm:col-span-2">
-                            <label>{orgInfo.id}</label>
+                          <label>{orgInfo.id}</label>
                             <button
                               onClick={() => copyToClipboard(orgInfo.id)}
                               className="whitespace-nowrap rounded-full bg-indigo-100 px-2.5 py-0.5 text-sm text-indigo-700 float-right">Copy</button>
@@ -217,7 +217,7 @@ const App = () => {
                       </dl>
                     </div>) :
                     (<div>
-                      <pre>{JSON.stringify(orgInfo, null, 2)}</pre>
+                      <pre style={{ overflowX: 'auto' }}>{JSON.stringify(orgInfo, null, 2)}</pre>
                     </div>)}
                 </div>
                 <div className="inline-flex items-center">
