@@ -50,8 +50,9 @@ const App = () => {
   const submitButton = useRef();
 
   const handleInputChange = (e) => {
-    setDomain(e.target.value);
-    setHint(autoCompleteDomain(e.target.value));
+    let cleanValue = e.target.value.replace(" ", "");
+    setDomain(cleanValue);
+    setHint(autoCompleteDomain(cleanValue));
   };
 
   const handleKeyDown = (e) => {
@@ -119,7 +120,7 @@ const App = () => {
                     onKeyDown={handleKeyDown}
                   />
                   {hint && (
-                    <label className="absolute top-0 left-0 px-4 py-4 text-sm pointer-events-none">
+                    <label className="absolute top-0 left-0 px-4 py-4 text-sm pointer-events-none whitespace-nowrap">
                       <span style={{ color: 'transparent' }}>{domain}</span>
                       <span style={{ color: 'gray' }}>{hint}</span>
                       <span style={{ opacity: '0.7' }} className="ml-12">Press <span className="whitespace-nowrap rounded-full bg-indigo-100 px-2.5 py-0.5 text-sm text-indigo-700">TAB</span> to autocomplete</span>
