@@ -1,15 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Footer from './Footer';
 
-const copyToClipboard = (text) => {
-  const textarea = document.createElement('textarea');
-  textarea.value = text;
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand('copy');
-  document.body.removeChild(textarea);
-};
-
 const normalizeDomain = (domain) => {
   if (!domain.startsWith('http://') && !domain.startsWith('https://')) {
     domain = `https://${domain}`;
@@ -157,7 +148,7 @@ const App = () => {
                           <dd className="text-gray-700 sm:col-span-2">
                           <label>{orgInfo.id}</label>
                             <button
-                              onClick={() => copyToClipboard(orgInfo.id)}
+                              onClick={() => navigator.clipboard.writeText(orgInfo.id)}
                               className="whitespace-nowrap rounded-full bg-indigo-100 px-2.5 py-0.5 text-sm text-indigo-700 float-right">Copy</button>
                           </dd>
                         </div>
@@ -167,7 +158,7 @@ const App = () => {
                           <dd className="text-gray-700 sm:col-span-2">
                             <label>{orgInfo.pipeline === 'idx' ? 'OIE' : 'Classic'}</label>
                             <button
-                              onClick={() => copyToClipboard(orgInfo.pipeline === 'idx' ? 'OIE' : 'Classic')}
+                              onClick={() => navigator.clipboard.writeText(orgInfo.pipeline === 'idx' ? 'OIE' : 'Classic')}
                               className="whitespace-nowrap rounded-full bg-indigo-100 px-2.5 py-0.5 text-sm text-indigo-700 float-right">Copy</button>
                           </dd>
                         </div>
@@ -177,7 +168,7 @@ const App = () => {
                           <dd className="text-gray-700 sm:col-span-2">
                             <label>{orgInfo.cell.toUpperCase()}</label>
                             <button
-                              onClick={() => copyToClipboard(orgInfo.cell.toUpperCase())}
+                              onClick={() => navigator.clipboard.writeText(orgInfo.cell.toUpperCase())}
                               className="whitespace-nowrap rounded-full bg-indigo-100 px-2.5 py-0.5 text-sm text-indigo-700 float-right">Copy</button>
                           </dd>
                         </div>
@@ -187,7 +178,7 @@ const App = () => {
                           <dd className="text-gray-700 sm:col-span-2">
                             <a href={orgInfo._links.organization.href} rel="noreferrer" target="_blank">{orgInfo._links.organization.href}</a>
                             <button
-                              onClick={() => copyToClipboard(orgInfo._links.organization.href)}
+                              onClick={() => navigator.clipboard.writeText(orgInfo._links.organization.href)}
                               className="whitespace-nowrap rounded-full bg-indigo-100 px-2.5 py-0.5 text-sm text-indigo-700 float-right">Copy</button>
                           </dd>
                         </div>
@@ -198,7 +189,7 @@ const App = () => {
                             <dd className="text-gray-700 sm:col-span-2">
                               <a href={orgInfo._links.alternate.href} rel="noreferrer" target="_blank">{orgInfo._links.alternate.href}</a>
                               <button
-                                onClick={() => copyToClipboard(orgInfo._links.alternate.href)}
+                                onClick={() => navigator.clipboard.writeText(orgInfo._links.alternate.href)}
                                 className="whitespace-nowrap rounded-full bg-indigo-100 px-2.5 py-0.5 text-sm text-indigo-700 float-right">Copy</button>
                             </dd>
                           </div>
@@ -210,7 +201,7 @@ const App = () => {
                             <dd className="text-gray-700 sm:col-span-2">
                               <a href={alternate.href} rel="noreferrer" target="_blank">{alternate.href}</a>
                               <button
-                                onClick={() => copyToClipboard(alternate.href)}
+                                onClick={() => navigator.clipboard.writeText(alternate.href)}
                                 className="whitespace-nowrap rounded-full bg-indigo-100 px-2.5 py-0.5 text-sm text-indigo-700 float-right">Copy</button>
                             </dd>
                           </div>
